@@ -1,0 +1,28 @@
+# generic 
+arch: "ResNet18" # prefer densenet/WideResNet (ref: bag of tricks adv. training)
+
+# dataset
+dataset: "imagenette"
+data_dir: "/scratch/gpfs/sihuid/data/imagenette2/"
+mode: "org"
+num_classes: 10
+size: 224
+normalize: False
+workers: 4
+
+# optimization
+epochs: 200
+batch_size: 128
+batch_size_syn: 128
+lr: 0.1
+weight_decay: 0.0005
+momentum: 0.9
+
+# adversarial examples
+epsilon: 0.031
+num_steps: 10
+step_size: 0.0078
+clip_min: 0.
+clip_max: 1.
+distance: "linf"
+beta: 6.0
